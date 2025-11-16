@@ -27,7 +27,7 @@
             background: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
@@ -37,22 +37,17 @@
 
         .main-image {
             width: 100%;
-            max-height: 350px;
-            object-fit: cover;
+            max-width: 800px;
+            display: block;
+            margin: 0 auto 20px auto;
             border-radius: 10px;
-            margin-bottom: 20px;
         }
 
-        .sub-image {
-            width: 100%;
-            max-width: 800px;
-            border-radius: 10px;
-            margin: 20px auto;
-            display: block;
+        ul {
+            padding-left: 20px;
         }
     </style>
 </head>
-
 <body>
 
 <header>
@@ -61,16 +56,13 @@
 
 <div class="container">
 
-    <!-- トップ写真（top.jpg） -->
-    <img src="top.jpg" alt="RVパーク s-craft 全体写真" class="main-image">
+    <!-- トレーラーハウスの写真 -->
+    <img src="トレーラーハウス_1200x900.jpg"
+         alt="トレーラーハウスの写真"
+         class="main-image">
 
     <h2>ようこそ！</h2>
     <p>岐阜県恵那市のRVパーク <strong>s-craft</strong> の公式サイトです。</p>
-
-    <!-- トレーラーハウス写真 -->
-    <img src="トレーラーハウス_1200x900.jpg" 
-         alt="トレーラーハウスの写真"
-         class="sub-image">
 
     <h2>設備</h2>
     <ul>
@@ -93,4 +85,3 @@
 
 </body>
 </html>
-
