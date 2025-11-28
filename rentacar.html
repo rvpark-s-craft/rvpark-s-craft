@@ -1,0 +1,363 @@
+G<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>s-craft レンタカー | BMW & EV TUKTUK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", sans-serif;
+      margin: 0;
+      color: #222;
+      background-color: #f7f7f7;
+      line-height: 1.7;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 16px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header .title {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    header nav {
+      margin-top: 8px;
+      font-size: 0.9rem;
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 12px;
+    }
+    .hero {
+      padding: 40px 20px 30px;
+      background: linear-gradient(135deg, #4b2bbf, #8b5cf6);
+      color: #fff;
+      text-align: center;
+    }
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 1.8rem;
+    }
+    .hero p {
+      margin: 0 0 16px;
+      font-size: 0.95rem;
+    }
+    .hero .cta-buttons {
+      margin-top: 10px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: none;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-decoration: none;
+      margin: 4px;
+    }
+    .btn-primary {
+      background: #fff;
+      color: #4b2bbf;
+      font-weight: 600;
+    }
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+    h2 {
+      margin-top: 32px;
+      border-left: 4px solid #4b2bbf;
+      padding-left: 8px;
+      font-size: 1.3rem;
+    }
+    h3 {
+      margin-top: 24px;
+      font-size: 1.1rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+      margin-top: 16px;
+    }
+    .vehicle-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .vehicle-layout img {
+      max-width: 320px;
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .vehicle-info {
+      flex: 1;
+      min-width: 260px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 0.9rem;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 6px 8px;
+      text-align: center;
+    }
+    table th {
+      background: #f0f0f5;
+    }
+    ul {
+      padding-left: 1.4em;
+      margin: 6px 0;
+      font-size: 0.92rem;
+    }
+    .note {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 4px;
+    }
+    .section {
+      margin-top: 24px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #777;
+      padding: 16px 0 24px;
+    }
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="title">s-craft レンタカー</div>
+    <nav>
+      <a href="#bmw">BMW320d</a>
+      <a href="#tuktuk">EV TUKTUK</a>
+      <a href="#price">料金</a>
+      <a href="#reserve">予約</a>
+      <a href="#policy">ご利用規約</a>
+      <a href="#access">アクセス</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>ちょっと特別な1日を、s-craftレンタカーで。</h1>
+    <p>BMWディーゼルワゴンとEV TUKTUK。<br>恵那の景色を、いつもと違うクルマで楽しみませんか？</p>
+    <div class="cta-buttons">
+      <a href="#reserve" class="btn btn-primary">予約する</a>
+      <a href="#bmw" class="btn btn-outline">車種を見る</a>
+    </div>
+  </section>
+
+  <main>
+    <!-- BMW -->
+    <section id="bmw">
+      <h2>BMW320d ヒッチメンバー付（F31）</h2>
+      <div class="card vehicle-layout">
+        <!-- ここにBMWの写真パスを入れてください -->
+        <!-- 例: <img src="images/bmw_f31_front.jpg" alt="BMW320d ヒッチメンバー付"> -->
+        <div class="vehicle-info">
+          <h3>ゆったり5人乗り、ディーゼルで長距離もラクラク。</h3>
+          <p>高速道路もワインディングも気持ちよく走れる、欧州ディーゼルワゴン。<br>
+          ヒッチメンバー付きで、アウトドアやアクティビティにも最適です。</p>
+          <ul>
+            <li>乗車人数：5人</li>
+            <li>ミッション / 燃料：AT / 軽油</li>
+            <li>走行範囲：制限なし（県外・長距離OK）</li>
+            <li>装備：ETC / ナビ / Bluetooth / ドラレコ / パワーシート / シートヒーター / ACC / ヒッチメンバー</li>
+            <li>ヒッチ利用：用途により事前相談のうえ利用可</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TUKTUK -->
+    <section id="tuktuk">
+      <h2>EV TUKTUK（電動三輪）</h2>
+      <div class="card vehicle-layout">
+        <!-- ここにTUKTUKの写真パスを入れてください -->
+        <!-- 例: <img src="images/ev_tuktuk_purple.jpg" alt="EV TUKTUK パープル"> -->
+        <div class="vehicle-info">
+          <h3>普通免許でOK。映えるパープルの電動トゥクトゥク。</h3>
+          <p>風を感じるオープンな乗り心地と、静かなEVのスムーズさ。<br>
+          恵那の街巡りや写真映えドライブにぴったりの1台です。</p>
+          <ul>
+            <li>普通免許で運転OK</li>
+            <li>最大3人乗り</li>
+            <li>冬・雨の日はサイドカバー装着</li>
+            <li>Bluetoothで音楽再生可能</li>
+            <li>利用時間：最大60分まで（バッテリー保護のため）</li>
+            <li>航続距離：約40km / 最高速度：約48km/h</li>
+            <li>充電：100V家庭用コンセント</li>
+            <li>走行エリア：スタイリング・クラフトから20km圏内</li>
+            <li>保険：対人・対物 無制限 / 搭乗者 3,000万円 / 車両保険なし</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 料金 -->
+    <section id="price">
+      <h2>料金</h2>
+
+      <div class="card section">
+        <h3>BMW320d ヒッチメンバー付（F31）</h3>
+        <table>
+          <tr>
+            <th>利用時間</th>
+            <th>税抜</th>
+            <th>税込</th>
+          </tr>
+          <tr>
+            <td>〜6時間</td>
+            <td>10,000円</td>
+            <td>11,000円</td>
+          </tr>
+          <tr>
+            <td>〜12時間</td>
+            <td>18,000円</td>
+            <td>19,800円</td>
+          </tr>
+          <tr>
+            <td>〜24時間</td>
+            <td>22,000円</td>
+            <td>24,200円</td>
+          </tr>
+          <tr>
+            <td>超過（1時間ごと）</td>
+            <td>4,000円</td>
+            <td>4,400円</td>
+          </tr>
+        </table>
+        <p class="note">※燃料（軽油）は満タン返しでお願いします。</p>
+      </div>
+
+      <div class="card section">
+        <h3>EV TUKTUK</h3>
+        <table>
+          <tr>
+            <th>利用時間</th>
+            <th>税込料金</th>
+          </tr>
+          <tr>
+            <td>60分（最大利用時間）</td>
+            <td>5,500円</td>
+          </tr>
+        </table>
+        <p class="note">
+          ※バッテリー保護のため、通常レンタルは60分までとなります。<br>
+          ※イベント利用・撮影等で長時間をご希望の場合は別途ご相談ください。
+        </p>
+      </div>
+    </section>
+
+    <!-- 予約 -->
+    <section id="reserve">
+      <h2>ご予約方法</h2>
+      <div class="card">
+        <p>予約カレンダーで空き状況をご確認のうえ、予約フォームからお申し込みください。</p>
+        <ul>
+          <li>STEP1：予約状況カレンダーで空き日程を確認</li>
+          <li>STEP2：予約フォームから必要事項を送信</li>
+          <li>STEP3：店舗からの折り返し連絡をもって予約確定</li>
+        </ul>
+        <p class="note">※クレジットカード決済をご希望の場合はお問い合わせください。</p>
+        <div style="margin-top:12px;">
+          <a class="btn btn-primary" href="<!-- ここに予約フォームのURL -->" target="_blank" rel="noopener">予約フォームを開く</a>
+          <a class="btn btn-outline" href="<!-- ここに予約カレンダーのURL（Googleカレンダー等） -->" target="_blank" rel="noopener">予約状況カレンダーを見る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 規約 -->
+    <section id="policy">
+      <h2>ご利用規約・注意事項</h2>
+      <div class="card">
+        <p>保険・補償、利用条件、車両のご利用についての詳細は、下記の内容をご確認ください。</p>
+        <pre style="white-space:pre-wrap;font-size:0.85rem;margin-top:8px;">
+【保険・補償について（BMW320d）】
+・対人賠償保険：無制限
+・対物賠償保険：無制限
+・搭乗者傷害保険：一名につき3,000万円
+・車両保険：車対車事故＋限定危険（車両同士の衝突等に限り適用）
+・免責額（自己負担額）：1事故につき5万円
+
+※単独事故、当て逃げ、飛び石、タイヤ・ホイール・内装の破損等、
+　保険適用外の損害については実費をご負担いただきます。
+
+【EV TUKTUK の保険・車両損害について】
+・対人賠償保険：無制限
+・対物賠償保険：無制限
+・搭乗者傷害保険：一名につき3,000万円
+・車両保険：加入なし
+
+※電柱・ガードレール・建物・他物への衝突や、転倒・接触などにより
+　車両に損傷が生じた場合の修理費用は、お客様のご負担となります。
+
+【ご利用条件】
+・日本国内で有効な普通自動車免許をお持ちの方
+・安全運転の遵守および交通法規の順守
+・飲酒運転、危険運転でのご利用は禁止です
+
+【車両のご利用について】
+・全車 禁煙 です（電子タバコ含む）
+・ペット同乗は不可となります
+・BMW320dは走行距離・走行エリアの制限はありません
+・EV TUKTUK はスタイリング・クラフトから20km圏内でのご利用に限ります
+・EV TUKTUK の通常レンタル時間は60分までとなります（バッテリー保護のため）
+・雨天・夜間でのご利用は可能ですが、路面状況に十分ご注意ください
+・返却時はガソリン／軽油を満タンにしてご返却ください（BMW320d）
+・返却時間を過ぎた場合は、所定の超過料金を申し受けます
+
+【ヒッチメンバーのご利用について（BMW320d）】
+・ヒッチメンバーのご利用は可能ですが、用途により事前相談が必要です
+・牽引物の種類や重量によっては、お断りさせていただく場合があります
+・ヒッチ利用時の事故や損害については、保険の適用範囲が異なる場合がありますので、必ず事前にご確認ください
+
+【その他】
+・ご予約内容と異なる利用が判明した場合は、ご利用をお断りする場合があります
+・規約は予告なく変更となる場合があります。最新情報はホームページでご確認ください。
+        </pre>
+      </div>
+    </section>
+
+    <!-- アクセス -->
+    <section id="access">
+      <h2>アクセス</h2>
+      <div class="card">
+        <p>
+          スタイリング・クラフト / RVパーク s-craft<br>
+          〒509-7124 岐阜県恵那市笠置町毛呂窪字滝坂1720-1
+        </p>
+        <p class="note">※受け渡し場所の詳細はご予約確定後にご案内いたします。</p>
+        <!-- Googleマップ埋め込みを入れたい場合はここにiframeを貼り付け -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; s-craft / Styling Craft
+  </footer>
+</body>
+</html>
+itHubでファイルを開く
