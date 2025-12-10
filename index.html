@@ -1,49 +1,37 @@
-FF<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>RVパーク s-craft｜岐阜・恵那の車中泊＆キャンプ</title>
+  <title>RVパーク s-craft | 恵那の小さな森のRVパーク</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="RVパーク s-craft（岐阜県恵那市笠置町）は、電源付き車中泊サイト・トレーラーハウス・バレルサウナを備えた小さなRVパークです。中央道恵那ICからアクセス良好。"
+    content="岐阜県恵那市の小さな森の中にある、電源付き車中泊サイトとフォレストリバー製トレーラーハウスのRVパーク s-craft。バレルサウナ、少数サイトならではの静かな時間をお楽しみください。"
   />
 
-  display: block;
-  width: 100%;
-  max-width: 480px;
-  margin: 16px auto 0;
-  border-radius: 12px;
-}
- <style>
   <style>
     :root {
-      --bg: #0f172a;
-      --bg-alt: #111827;
+      --bg-main: #020617;
+      --bg-card: #020617;
+      --bg-elevated: #020617;
       --accent: #22c55e;
-      --accent-soft: rgba(34, 197, 94, 0.14);
-      --text-main: #f9fafb;
-      --text-muted: #9ca3af;
-      --card-bg: rgba(15, 23, 42, 0.9);
-      --border-subtle: rgba(148, 163, 184, 0.35);
-      --radius-lg: 18px;
-      --radius-xl: 24px;
-      --shadow-soft: 0 20px 45px rgba(0, 0, 0, 0.45);
+      --accent-soft: rgba(34, 197, 94, 0.15);
+      --text-main: #e5e7eb;
+      --text-mute: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.4);
+      --radius-xl: 18px;
     }
 
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-      background: radial-gradient(circle at top, #1f2937 0, #020617 50%, #000 100%);
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      background: radial-gradient(circle at top left, #0f172a 0, #020617 55%, #000 100%);
       color: var(--text-main);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+      line-height: 1.7;
     }
 
     a {
@@ -51,1098 +39,636 @@ FF<!DOCTYPE html>
       text-decoration: none;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .container {
-      width: min(1120px, 100% - 32px);
+    .shell {
+      max-width: 1080px;
       margin: 0 auto;
+      padding: 16px 16px 72px;
     }
 
+    /* header / nav */
     header {
       position: sticky;
       top: 0;
-      z-index: 40;
-      backdrop-filter: blur(18px);
-      background: linear-gradient(
-        to bottom,
-        rgba(15, 23, 42, 0.92),
-        rgba(15, 23, 42, 0.75),
-        rgba(15, 23, 42, 0.2)
-      );
-      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.7), transparent);
     }
 
     .header-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 8px 16px 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 0;
       gap: 16px;
     }
 
-    .logo {
+    .brand {
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .logo-mark {
-      width: 34px;
-      height: 34px;
+    .brand-logo {
+      width: 36px;
+      height: 36px;
       border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #bbf7d0, #16a34a 45%, #052e16 100%);
+      background: radial-gradient(circle at 30% 20%, #4ade80, #16a34a);
       display: flex;
       align-items: center;
       justify-content: center;
+      font-weight: 700;
       font-size: 18px;
-      font-weight: 700;
-      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.5);
+      color: #022c22;
     }
 
-    .logo-text-main {
-      font-size: 17px;
+    .brand-text-main {
+      font-size: 16px;
       font-weight: 700;
-      letter-spacing: 0.06em;
     }
 
-    .logo-text-sub {
+    .brand-text-sub {
       font-size: 11px;
-      color: var(--text-muted);
+      color: var(--text-mute);
     }
 
     nav {
       display: flex;
+      align-items: center;
       gap: 14px;
       font-size: 13px;
     }
 
-    nav a {
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      color: var(--text-muted);
-      transition: all 0.18s ease-out;
-      white-space: nowrap;
+    .nav-link {
+      padding: 4px 0;
+      color: var(--text-mute);
     }
 
-    nav a:hover {
+    .nav-link:hover {
       color: var(--text-main);
-      border-color: rgba(148, 163, 184, 0.6);
-      background: rgba(15, 23, 42, 0.85);
     }
 
     .nav-cta {
-      border-color: rgba(74, 222, 128, 0.7);
-      background: radial-gradient(circle at top, #22c55e, #16a34a);
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--accent);
       color: #022c22;
       font-weight: 600;
-      box-shadow: 0 8px 22px rgba(22, 163, 74, 0.6);
+      font-size: 13px;
+      box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.5), 0 10px 30px rgba(22, 163, 74, 0.55);
     }
 
     .nav-cta:hover {
-      border-color: #bbf7d0;
-      transform: translateY(-1px);
+      filter: brightness(1.08);
     }
 
-    main {
-      flex: 1;
-      padding-bottom: 56px;
-    }
-
-    /* ===== Hero ===== */
-
-    .hero {
-      padding: 40px 0 32px;
-      position: relative;
-      overflow: hidden;
-    }
+    /* hero */
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+      grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
       gap: 28px;
-      align-items: center;
+      padding-top: 18px;
     }
 
-    @media (max-width: 880px) {
-      .hero-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .hero-label {
+    .pill {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      font-size: 11px;
+      gap: 6px;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid rgba(148, 163, 184, 0.45);
-      color: var(--text-muted);
-      margin-bottom: 10px;
+      padding: 3px 10px;
+      font-size: 11px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: radial-gradient(circle at 0 0, rgba(34, 197, 94, 0.25), rgba(15, 23, 42, 0.9));
+      color: var(--text-mute);
     }
 
-    .hero-label-pill {
-      padding: 2px 8px;
+    .pill-dot {
+      width: 14px;
+      height: 14px;
       border-radius: 999px;
-      background: rgba(34, 197, 94, 0.12);
-      color: #bbf7d0;
-      font-weight: 600;
-      font-size: 10px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      background: var(--accent-soft);
+      border: 1px solid rgba(74, 222, 128, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pill-dot-inner {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #4ade80;
     }
 
     .hero-title {
-      font-size: clamp(26px, 4vw, 34px);
-      line-height: 1.2;
-      margin-bottom: 12px;
-      letter-spacing: 0.02em;
+      margin: 14px 0 4px;
+      font-size: 26px;
+      line-height: 1.3;
     }
 
-    .hero-title span.highlight {
-      color: #a5b4fc;
-      text-shadow: 0 0 35px rgba(129, 140, 248, 0.7);
+    .hero-title span {
+      color: #bfdbfe;
     }
 
-    .hero-lead {
+    .hero-subtitle {
       font-size: 14px;
-      color: var(--text-muted);
-      max-width: 34rem;
+      color: var(--text-mute);
       margin-bottom: 18px;
     }
 
-    .hero-meta {
+    .hero-badges {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
       margin-bottom: 18px;
-      font-size: 11px;
-      color: var(--text-muted);
     }
 
-    .hero-meta span {
-      padding: 3px 9px;
+    .badge {
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.45);
-      background: rgba(15, 23, 42, 0.85);
+      padding: 4px 10px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      font-size: 11px;
+      color: var(--text-mute);
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 16px;
+      margin-bottom: 22px;
     }
 
-    .btn-primary,
-    .btn-subtle {
-      padding: 10px 16px;
+    .hero-primary {
       border-radius: 999px;
-      font-size: 13px;
-      border: 1px solid transparent;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      transition: all 0.18s ease-out;
-    }
-
-    .btn-primary {
-      background: radial-gradient(circle at top, #22c55e, #16a34a 60%, #15803d);
-      color: #022c22;
+      padding: 9px 18px;
+      font-size: 14px;
       font-weight: 600;
-      box-shadow: 0 14px 28px rgba(22, 163, 74, 0.7);
-      border-color: rgba(74, 222, 128, 0.9);
+      background: var(--accent);
+      color: #022c22;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.7), 0 18px 40px rgba(22, 163, 74, 0.65);
     }
 
-    .btn-primary:hover {
-      transform: translateY(-1px) scale(1.01);
-      box-shadow: 0 18px 40px rgba(22, 163, 74, 0.8);
-    }
-
-    .btn-subtle {
+    .hero-secondary {
+      border-radius: 999px;
+      padding: 9px 16px;
+      font-size: 13px;
       background: rgba(15, 23, 42, 0.9);
-      border-color: rgba(148, 163, 184, 0.5);
-      color: var(--text-muted);
-    }
-
-    .btn-subtle:hover {
-      color: var(--text-main);
-      border-color: rgba(209, 213, 219, 0.9);
-      background: rgba(15, 23, 42, 1);
+      border: 1px solid rgba(148, 163, 184, 0.65);
+      color: var(--text-mute);
+      cursor: pointer;
     }
 
     .hero-note {
       font-size: 11px;
-      color: var(--text-muted);
+      color: var(--text-mute);
     }
 
-    .hero-note strong {
-      color: #e5e7eb;
-    }
+    /* hero media */
 
     .hero-media {
-      position: relative;
-      isolation: isolate;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
     }
 
     .hero-card {
-      border-radius: 26px;
-      overflow: hidden;
-      background: radial-gradient(circle at 10% 0, #22c55e 0, #0f172a 40%, #020617 100%);
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      box-shadow: var(--shadow-soft);
       position: relative;
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.2), rgba(15, 23, 42, 0.98));
+      border-radius: 20px;
+      padding: 10px 10px 14px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.8);
+      width: 100%;
+      max-width: 420px;
     }
 
     .hero-image-wrap {
       position: relative;
       overflow: hidden;
-      max-height: 260px;
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
     }
 
     .hero-image {
       width: 100%;
-      height: 260px;
-      object-fit: cover;
-      object-position: center;
-      filter: saturate(1.1);
+      display: block;
     }
 
     .hero-tag {
       position: absolute;
-      left: 14px;
-      top: 14px;
-      padding: 4px 9px;
-      font-size: 11px;
+      left: 10px;
+      bottom: 10px;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.75);
-      border: 1px solid rgba(148, 163, 184, 0.7);
+      padding: 4px 10px;
+      font-size: 11px;
+      background: rgba(15, 23, 42, 0.85);
       color: #e5e7eb;
+      border: 1px solid rgba(148, 163, 184, 0.8);
     }
 
     .hero-card-footer {
-      padding: 10px 14px 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      backdrop-filter: blur(12px);
-      background: linear-gradient(
-        to right,
-        rgba(15, 23, 42, 0.9),
-        rgba(15, 23, 42, 0.6)
-      );
-      border-top: 1px solid rgba(148, 163, 184, 0.5);
+      padding-top: 10px;
     }
 
     .hero-card-text {
-      font-size: 11px;
-      color: var(--text-muted);
+      font-size: 12px;
+      color: var(--text-mute);
     }
 
-    .hero-card-text strong {
-      color: #f9fafb;
-    }
+    /* trailer layout image (間取り図) */
 
-    .hero-pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      font-size: 10px;
-      margin-top: 2px;
-    }
-
-    .hero-pill {
-      padding: 2px 8px;
-      border-radius: 999px;
+    .trailer-layout-image {
+      display: block;
+      width: 100%;
+      max-width: 480px;
+      margin: 16px auto 0;
+      border-radius: 12px;
       border: 1px solid rgba(148, 163, 184, 0.5);
-      background: rgba(15, 23, 42, 0.8);
-      color: #e5e7eb;
     }
 
-    .hero-badge {
-      font-size: 11px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: rgba(22, 163, 74, 0.15);
-      color: #bbf7d0;
-      border: 1px solid rgba(74, 222, 128, 0.7);
-    }
-
-    /* ===== Sections ===== */
+    /* section base */
 
     section {
-      padding: 26px 0;
-    }
-
-    .section-header {
-      margin-bottom: 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 12px;
+      margin-top: 40px;
     }
 
     .section-title {
-      font-size: 19px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
+      font-size: 20px;
+      margin-bottom: 8px;
     }
 
-    .section-subtitle {
-      font-size: 12px;
-      color: var(--text-muted);
+    .section-sub {
+      font-size: 13px;
+      color: var(--text-mute);
+      margin-bottom: 16px;
     }
 
-    /* cards row */
-
-    .card-row {
+    .cards {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
     }
 
-    @media (max-width: 980px) {
-      .card-row {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .card-row {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
     .card {
-      border-radius: var(--radius-lg);
-      padding: 14px;
-      background: radial-gradient(circle at top left, #1e293b, #020617);
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: var(--radius-xl);
       border: 1px solid var(--border-subtle);
-      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card h3 {
-      font-size: 15px;
-      margin-bottom: 4px;
-    }
-
-    .card-tagline {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-
-    .card-list {
-      list-style: none;
-      font-size: 12px;
-      color: var(--text-muted);
-      display: grid;
-      gap: 4px;
-    }
-
-    .card-list li::before {
-      content: "・";
-      margin-right: 2px;
-      color: #a5b4fc;
+      padding: 14px 14px 12px;
+      font-size: 13px;
     }
 
     .card-label {
-      font-size: 11px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(30, 64, 175, 0.35);
-      color: #e0f2fe;
       display: inline-block;
-      margin-bottom: 4px;
-    }
-
-    .card-label-green {
-      background: rgba(22, 163, 74, 0.35);
-      color: #bbf7d0;
-    }
-
-    .card-label-gold {
-      background: rgba(234, 179, 8, 0.28);
-      color: #fef9c3;
-    }
-
-    .card-price {
-      margin-top: 8px;
-      font-size: 12px;
-      color: #e5e7eb;
-    }
-
-    .card-price span {
-      color: #a5b4fc;
-      font-weight: 600;
-    }
-
-    /* ===== Access / table ===== */
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.2fr);
-      gap: 16px;
-    }
-
-    @media (max-width: 800px) {
-      .info-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .info-card {
-      border-radius: var(--radius-xl);
-      padding: 14px;
-      background: radial-gradient(circle at top left, #111827, #020617);
-      border: 1px solid var(--border-subtle);
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .info-card h3 {
-      font-size: 14px;
-      color: #e5e7eb;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      font-size: 11px;
+      color: var(--text-mute);
       margin-bottom: 6px;
     }
 
-    .info-table {
-      width: 100%;
-      border-collapse: collapse;
+    .card h3 {
+      font-size: 14px;
+      margin: 0 0 6px;
+    }
+
+    .card-tagline {
       font-size: 12px;
+      color: var(--text-mute);
+      margin: 0 0 8px;
+    }
+
+    .card-list {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 12px;
+      color: var(--text-mute);
+    }
+
+    .note {
+      font-size: 11px;
+      color: var(--text-mute);
       margin-top: 4px;
     }
 
-    .info-table th,
-    .info-table td {
-      padding: 4px 0;
-      border-bottom: 1px solid rgba(31, 41, 55, 0.9);
-      vertical-align: top;
+    /* 2カラム */
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
+      gap: 18px;
     }
 
-    .info-table th {
-      width: 88px;
-      color: #9ca3af;
-      font-weight: 500;
-      padding-right: 12px;
+    /* access */
+
+    .access-wrap {
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-subtle);
+      padding: 14px 14px 4px;
+      font-size: 13px;
     }
 
-    .info-note {
-      margin-top: 6px;
+    footer {
+      margin-top: 40px;
       font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .map-dummy {
-      margin-top: 8px;
-      border-radius: 14px;
-      border: 1px dashed rgba(148, 163, 184, 0.5);
-      padding: 10px;
-      font-size: 11px;
-      color: var(--text-muted);
+      color: var(--text-mute);
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      padding-top: 14px;
       text-align: center;
     }
 
-    /* ===== Reservation ===== */
+    /* responsive */
 
-    .reservation-box {
-      border-radius: var(--radius-xl);
-      padding: 14px;
-      background: linear-gradient(
-        135deg,
-        rgba(22, 163, 74, 0.12),
-        rgba(15, 23, 42, 0.95)
-      );
-      border: 1px solid rgba(52, 211, 153, 0.8);
-      box-shadow: 0 18px 44px rgba(16, 185, 129, 0.6);
-      font-size: 12px;
-      color: var(--text-main);
-    }
-
-    .reservation-box h3 {
-      font-size: 15px;
-      margin-bottom: 6px;
-    }
-
-    .reservation-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .reservation-item {
-      flex: 1 1 160px;
-      min-width: 0;
-      padding: 8px 10px;
-      border-radius: 14px;
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .reservation-item strong {
-      display: block;
-      font-size: 11px;
-      color: #e5e7eb;
-      margin-bottom: 3px;
-    }
-
-    .reservation-link {
-      color: #bbf7d0;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-    }
-
-    /* ===== Footer ===== */
-
-    footer {
-      border-top: 1px solid rgba(31, 41, 55, 0.95);
-      padding: 16px 0 22px;
-      font-size: 11px;
-      color: var(--text-muted);
-      background: radial-gradient(circle at top, #020617, #000 60%);
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a {
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-    }
-
-    /* small helper */
-
-    .mono {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-        "Liberation Mono", "Courier New", monospace;
-      font-size: 11px;
-    }
-
-    @media (max-width: 480px) {
-      .hero {
-        padding-top: 26px;
-      }
-
-      .hero-title {
-        font-size: 23px;
-      }
-
-      .header-inner {
-        flex-wrap: wrap;
+    @media (max-width: 840px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
       }
 
       nav {
-        width: 100%;
-        justify-content: flex-start;
-        flex-wrap: wrap;
+        display: none;
+      }
+
+      .shell {
+        padding-inline: 14px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .two-col {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
-    <!-- ===== Header ===== -->
-    <header>
-      <div class="container header-inner">
-        <div class="logo">
-          <div class="logo-mark">RV</div>
-          <div>
-            <div class="logo-text-main">RVパーク s-craft</div>
-            <div class="logo-text-sub">岐阜・恵那｜小さな森のRVパーク</div>
-          </div>
-        </div>
-
-        <nav>
-          <a href="#about">特徴</a>
-          <a href="#facilities">設備</a>
-          <a href="#sites">サイト＆料金</a>
-          <a href="#access">アクセス</a>
-          <a href="#reservation" class="nav-cta">予約する</a>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <!-- ===== Hero ===== -->
-      <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <div class="hero-label">
-              <span class="hero-label-pill">RV Park</span>
-              <span>フォレストリバー製トレーラーハウス × バレルサウナ</span>
-            </div>
-
-            <h1 class="hero-title">
-              恵那の山あいで、<span class="highlight">静かに一泊</span><br />
-              電源付き車中泊とトレーラーハウスのRVパーク
-            </h1>
-
-            <p class="hero-lead">
-           RVパーク s-craft は、岐阜県恵那市の小さな森の中にある
-電源付き車中泊サイトとトレーラーハウスのRVパークです。
-              トレーラーハウス、バレルサウナ、少数サイトならではの静かな時間をお楽しみください。
-            </p>
-
-            <div class="hero-meta">
-              <span>中央道・恵那ICから車で約7分</span>
-              <span>電源・水道・トイレ・シャワー完備</span>
-              <span>1日 最大4組まで</span>
-            </div>
-
-            <div class="hero-actions">
-              <a href="#reservation" class="btn-primary">
-                予約ページへ
-                <span aria-hidden="true">→</span>
-              </a>
-              <a href="#sites" class="btn-subtle">
-                サイト・料金を見る
-              </a>
-            </div>
-
-            <p class="hero-note">
-              ※ 予約は外部サイト（なっぷ / じゃらん など）または
-              <strong>お問い合わせフォーム</strong> から承っています。
-            </p>
-          </div>
-
-   
- 
-
-<!-- トレーラーハウス セクション -->
-<div class="hero-media">
-  <div class="hero-card">
-    <div class="hero-image-wrap">
-      <!-- 外観写真（1枚だけでOK） -->
-      <img
-        src="images/trailer-hero.jpg"
-        alt="RVパーク s-craft のトレーラーハウス外観"
-        class="hero-image"
-      />
-
-      <div class="hero-tag">Forest River Trailer House</div>
-    </div>
-
-    <div class="hero-card-footer">
-      <div class="hero-card-text">
-        フォレストリバー製トレーラーハウス<br>
-        エアコン・暖房完備、ダブルベッド1台＋2段ベッド、キッチン付きで雨の日も快適。<br>
-        電子レンジ・IH・ケトル・空気清浄機・簡単な食器類もご利用いただけます。<br>
-        最大4名まで宿泊可能<br>
-        室内トイレ・シャワー・冷蔵庫付き
-      </div>
-
-      <!-- （ここに元々の hero-badge ブロックが続いていると思うので、そのまま残してOK） -->
-    </div>
-  </div>
-</div>
-
-<!-- トレーラーハウス室内レイアウト図（hero-card の外に出す） -->
-<img
-  src="images/trailer_layout.png"
-  alt="トレーラーハウスの室内レイアウト"
-  class="trailer-layout-image">
-
-
-      <div class="hero-tag">Forest River Trailer House</div>
-    </div>
-
-    <div class="hero-card-footer">
-    
-      <!-- この下に、もともとあった hero-badge が続く -->
-
-                  バレルサウナ付きプランもご相談ください
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== About / Features ===== -->
-      <section id="about">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">RVパーク s-craft の特徴</h2>
-            <p class="section-subtitle">
-              小さなRVパークだからこそできる、静かでゆるやかな滞在。
-            </p>
-          </div>
-
-          <div class="card-row">
-            <article class="card">
-              <div class="card-label card-label-green">少数サイト・静かな環境</div>
-             <h3>1日最大4組までの受け入れ</h3>
-<p>
-  サイト数を絞ることで、ゆったりとしたスペースと静けさを大切にしています。<br><br>
-
-  電源付き車中泊サイト 4区画<br>
-  隣サイトとの距離にゆとりあり<br>
-  お得な貸し切りサイトプランもあります（最大10名まで）<br>
-<section id="private-plan" class="section-block">
-  <h2 class="section-title">サイト貸し切りプラン</h2>
-
-  <p class="section-subtitle">
-    RVパーク s-craft では、<strong>全4区画のRVサイトをまとめてご利用いただける
-    「サイト貸し切りプラン」</strong>をご用意しています。<br>
-    他のお客様を気にせず、仲間やご家族だけで、ゆったりとした時間をお過ごしいただけます。
-  </p>
-
-  <div class="section-grid">
-    <div>
-      <div class="info-card">
-        <h3>🚐 貸し切り内容</h3>
-        <ul class="info-list">
-          <li>RVサイト 4区画すべてを貸し切りでご利用</li>
-          <li>キャンピングカー・車中泊・テント設営もグループ内で自由</li>
-          <li>周囲を気にせずBBQ・サウナ・焚き火などを楽しめます</li>
-        </ul>
-      </div>
-
-      <div class="info-card">
-        <h3>💡 ご利用シーン</h3>
-        <ul class="info-list">
-          <li>グループキャンプ・家族旅行</li>
-          <li>オフ会・ツーリング仲間の集まり</li>
-          <li>記念日キャンプ・少人数イベント</li>
-        </ul>
-      </div>
-    </div>
-
-    <div>
-      <div class="info-card">
-        <h3>💰 料金の考え方</h3>
-        <ul class="info-list">
-          <li><strong>4区画すべて利用可能</strong></li>
-          <li><strong>お支払いは「3区画分の料金」</strong></li>
-          <li>実質「1区画分お得」な貸し切り特別プランです</li>
-        </ul>
-        <p class="note">
-          ※料金の詳細は通常のサイト料金表に準じます。
-        </p>
-      </div>
-
-      <div class="info-card">
-        <h3>⚠ ご利用にあたって</h3>
-        <ul class="info-list">
-          <li>事前予約制となります</li>
-          <li>曜日・繁忙期などにより対象外となる場合があります</li>
-          <li>大音量・深夜の騒音はご遠慮ください</li>
-        </ul>
-        <p class="note">
-          ※ご希望日の空き状況は、予約サイトまたはお問い合わせよりご確認ください。
-        </p>
-      </div>
-    </div>
-  </div>
-<p class="note">
-  ※車両は、<br>
-  なるべく乗り合わせでのご来場にご協力をお願いいたします。
-</p>
-
-
-
-            <article class="card">
-              <div class="card-label">トレーラーハウス泊</div>
-              <h3>フォレストリバー製トレーラーハウス</h3>
-              <p class="card-tagline">
-                スライドアウト付きの本格トレーラー。雨の日や冬でも快適に過ごせます。
-              </p>
-              <ul class="card-list">
-                <li>エアコン・ベッド・ソファ</li>
-                <li>簡易キッチン・冷蔵庫</li>
-               
-            </article>
-<section id="sauna" class="section-block">
-  <h2 class="section-title">サウナ＆共用設備</h2>
-  <p class="section-subtitle">
-    RVパーク s-craft では、バレルサウナやシャワー、炊事場など、
-    滞在を快適にする共用設備をご用意しています。<br>
-    日帰りサウナ利用、宿泊とセットでのご利用など、スタイルに合わせてお楽しみください。
-  </p>
-
-  <div class="section-grid">
-    <div>
-      <div class="info-card">
-        <h3>🧖 バレルサウナ（予約制）</h3>
-        <ul class="info-list">
-          <li>木の香りに包まれるバレルタイプの本格サウナ</li>
-          <li>ご利用は事前予約制となります</li>
-          <li>ご家族やご友人と気兼ねなく「ととのう」時間を</li>
-        </ul>
-      </div>
-
-      <div class="info-card">
-        <h3>🚿 シャワー</h3>
-        <ul class="info-list">
-          <li>サウナご利用時はもちろん、宿泊のお客様もご利用いただけます</li>
-          <li>お湯が使えるので、アウトドアの後でも快適です</li>
-        </ul>
-      </div>
-    </div>
-
-    <div>
-      <div class="info-card">
-        <h3>🚻 トイレ</h3>
-        <ul class="info-list">
-          <li>男女別トイレをご用意しています</li>
-          <li>すべて洋式・ウォシュレット付きで清潔に保たれています</li>
-        </ul>
-      </div>
-
-      <div class="info-card">
-        <h3>🍳 炊事場（シンク・給湯）</h3>
-        <ul class="info-list">
-          <li>シンク＆給湯完備の炊事スペース</li>
-          <li>ちょっとした調理や後片付けに便利です</li>
-          <li>他のお客様とゆずりあってご利用ください</li>
-        </ul>
-      </div>
-
-      <p class="note">
-        ※ご利用時間・料金、サウナの予約方法などは、ページ下部のご案内または受付にてご確認ください。
-      </p>
-    </div>
-  </div>
-</section>
-
-
-              <h3>場内イメージ</h3>
-              <p>
-                トレーラーハウス、サウナ、車中泊サイト、BBQスペースなど、
-                少しずつ手を入れながら育てているRVパークです。
-              </p>
-              <div class="map-dummy">
-                ここに後日<br />
-                「サイト配置図」や「Googleマップの埋め込み」<br />
-                を追加する予定です。
-              </div>
-              <p class="info-note">
-                サイトの位置や車の向きなど、ご希望があれば予約時にお知らせください。
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== Sites & Price ===== -->
-      <section id="sites">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">サイト・料金</h2>
-            <p class="section-subtitle">
-              料金はシーズンや予約サイトにより変動する場合があります。目安としてご確認ください。
-            </p>
-          </div>
-
-          <div class="card-row">
-            <article class="card">
-              <div class="card-label card-label-green">CAR STAY</div>
-              <h3>電源付き 車中泊サイト</h3>
-              <p class="card-tagline">
-                普通車〜ミニバン・ハイエース・キャンピングカーなどの車中泊向け区画です。
-              </p>
-              <ul class="card-list">
-                <li>区画サイズ：おおよそ 7m × 5m 前後</li>
-                <li>AC100V 電源 2口</li>
-                <li>サイト内 BBQ は火器ルールを遵守ください</li>
-              </ul>
-              <p class="card-price">
-                料金目安：<span>1台3300円〜 / 泊</span><br />
-                （1名まで・追加人数は別途）
-              </p>
-            </article>
-
-            <article class="card">
-              <div class="card-label">TRAILER STAY</div>
-              <h3>トレーラーハウス宿泊</h3>
-              <p class="card-tagline">
-                はじめてのトレーラー泊にもおすすめです。
-              </p>
-              <ul class="card-list">
-                <li>ベッド・ソファ・テーブル</li>
-                <li>エアコン・キッチン</li>
-              
-              <p class="card-price">
-                料金目安：<span>2名利用で16500円〜 / 泊</span><br />
-                （詳細は予約サイト参照）
-              </p>
-            </article>
-
-            <article class="card">
-              <div class="card-label card-label-gold">SAUNA OPTION</div>
-              <h3>バレルサウナ（オプション）</h3>
-              <p class="card-tagline">
-                宿泊とセットで楽しめるバレルサウナを準備中です。
-              </p>
-              <ul class="card-list">
-                <li>完全予約制・時間貸し</li>
-                <li>水風呂・外気浴スペース</li>
-                <li>ローリュー可能</li>
-              </ul>
-              <p class="card-price">
-                料金：<span>1人/90分/3300円 / 
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== Access & Reservation ===== -->
-      <section id="access">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">アクセス</h2>
-            <p class="section-subtitle">
-              カーナビや地図アプリには、住所または「RVパーク s-craft」で検索してみてください。
-            </p>
-          </div>
-
-          <div class="info-grid">
-            <div class="info-card">
-              <h3>所在地</h3>
-              <table class="info-table">
-                <tr>
-                  <th>住所</th>
-                  <td>
-                    岐阜県恵那市笠置町毛呂窪字滝坂1720-1<br />
-                    <span class="mono">（RVパーク s-craft）</span>
-                  </td>
-                </tr>
-                <tr>
-                  <th>車で</th>
-                  <td>
-                    中央自動車道「恵那IC」より約7分<br />
-                    付近に到達したら、場内案内看板に従ってお進みください。
-                  </td>
-                </tr>
-                <tr>
-                  <th>周辺</th>
-                  <td>
-                    スーパー・コンビニは恵那市街地側にございます。<br />
-                    必要な買い物は事前にお済ませいただくと安心です。
-                  </td>
-                </tr>
-              </table>
-              <p class="info-note">
-                道が不安な場合は、到着予定時間に合わせてご連絡いただければナビの目安をお伝えします。
-              </p>
-            </div>
-
-            <div class="info-card" id="reservation">
-              <div class="reservation-box">
-                <h3>予約・お問い合わせ</h3>
-                <p>
-                  現在、以下の方法でご予約を受け付けています。<br />
-                  いずれかご都合のよい窓口からお申し込みください。
-                </p>
-
-                <div class="reservation-row">
-                  <div class="reservation-item">
-                    <strong>キャンプ予約サイト</strong>
-                 <ul class="card-list">
-  <li>
-    <a href="https://www.nap-camp.com/gifu/16443" class="reservation-link">
-      なっぷ（RVパーク s-craft）
-    </a>
-  </li>
-
-<li>
-  <a href="https://camp.travel.rakuten.co.jp/properties/1321" class="reservation-link">
-    楽天トラベルキャンプ
-  </a>
-</li>
-
-<li>
-  <a href="https://www.jalan.net/yad380185/" class="reservation-link">
-    じゃらん
-  </a>
-</li>
-
-
-  <li>
-    <a href="https://web.rv-park.jp/spaces/detail/280" class="reservation-link">
-      RVパーク.jp（くるま旅公式）
-    </a>
-  </li>
-</ul>
-
-
-                  </div>
-
-                  <div class="reservation-item">
-                    <strong>直接予約・お問い合わせ</strong>
-                    <p>
-                      メールフォーム（準備中）または<br />
-                      お電話にて承ります。
-                    </p>
-                    <p class="mono">
-                      Mail：ayuya.s.craft@gmail.com<br />
-                      Tel：090-7851-1595
-                    </p>
-                  </div>
-                </div>
-
-                <p class="info-note" style="margin-top: 10px;">
-                  キャンセルポリシーやチェックイン／アウト時間、注意事項などの詳細は、各予約サイトのページをご確認ください。
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- ===== Footer ===== -->
-    <footer>
-      <div class="container footer-inner">
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-logo">RV</div>
         <div>
-          &copy; <span id="year"></span> RVパーク s-craft. All rights reserved.
-        </div>
-        <div class="footer-links">
-          <a href="#about">施設概要</a>
-          <a href="#access">アクセス</a>
-          <a href="#reservation">予約方法</a>
+          <div class="brand-text-main">RVパーク s-craft</div>
+          <div class="brand-text-sub">岐阜・恵那 | 小さな森のRVパーク</div>
         </div>
       </div>
-    </footer>
-  </div>
+      <nav>
+        <a href="#features" class="nav-link">特徴</a>
+        <a href="#equipment" class="nav-link">設備</a>
+        <a href="#sites" class="nav-link">サイト＆料金</a>
+        <a href="#access" class="nav-link">アクセス</a>
+        <a href="#reserve" class="nav-cta">予約する</a>
+      </nav>
+    </div>
+  </header>
 
-  <script>
-    // フッターの年号を自動更新
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <main class="shell">
+    <!-- hero -->
+    <section id="top" class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="pill">
+            <div class="pill-dot"><div class="pill-dot-inner"></div></div>
+            恵那の山あいで、静かに一泊
+          </div>
+          <h1 class="hero-title">
+            電源付き車中泊と<br />
+            トレーラーハウスのRVパーク
+          </h1>
+          <p class="hero-subtitle">
+            RVパーク s-craft は、岐阜県恵那市の小さな森の中にある電源付き車中泊サイトと
+            フォレストリバー製トレーラーハウスのRVパークです。<br />
+            バレルサウナ、少数サイトならではの静かな時間をお楽しみください。
+          </p>
+
+          <div class="hero-badges">
+            <span class="badge">電源付き車中泊サイト 4区画</span>
+            <span class="badge">フォレストリバー製トレーラーハウス</span>
+            <span class="badge">バレルサウナ（予約制）</span>
+          </div>
+
+          <div class="hero-actions" id="reserve">
+            <a href="#sites"><button class="hero-primary">サイト＆料金を見る</button></a>
+            <a href="#access"><button class="hero-secondary">アクセスを確認</button></a>
+          </div>
+          <div class="hero-note">
+            ※ご予約は各種予約サイトまたはお電話にて承っております。
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-card">
+            <div class="hero-image-wrap">
+              <img
+                src="images/trailer-hero.jpg"
+                alt="RVパーク s-craft のトレーラーハウス外観"
+                class="hero-image"
+              />
+              <div class="hero-tag">Forest River Trailer House</div>
+            </div>
+            <div class="hero-card-footer">
+              <div class="hero-card-text">
+                フォレストリバー製トレーラーハウス。<br />
+                エアコン・暖房完備で、雨の日や冬でも快適。<br />
+                ダブルベッド1台＋2段ベッドで最大4名まで宿泊可能。<br />
+                キッチン（IH・電子レンジ・ケトル・簡単な食器類）と、室内トイレ・シャワー・冷蔵庫付きです。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 室内レイアウト図 -->
+      <img
+        src="images/trailer_layout.png"
+        alt="トレーラーハウスの室内レイアウト"
+        class="trailer-layout-image"
+      />
+      <p class="note">
+        ※実際の配置・サイズと多少異なる場合があります。イメージとしてご覧ください。
+      </p>
+    </section>
+
+    <!-- 特徴 -->
+    <section id="features">
+      <h2 class="section-title">特徴</h2>
+      <p class="section-sub">
+        少数サイトの静かなRVパークなので、周りを気にせずゆったりとした時間をお過ごしいただけます。
+      </p>
+      <div class="cards">
+        <article class="card">
+          <div class="card-label">電源付き車中泊サイト</div>
+          <h3>少数サイトで静かな夜</h3>
+          <p class="card-tagline">
+            電源付きの車中泊サイトが4区画。森に囲まれた、落ち着いた雰囲気です。
+          </p>
+          <ul class="card-list">
+            <li>AC電源付き・フラットなサイト</li>
+            <li>キャンピングカー・車中泊・テント泊に対応</li>
+            <li>サイト貸し切りプランにも対応（4区画をまとめて利用）</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-label">トレーラーハウス泊</div>
+          <h3>フォレストリバー製トレーラーハウス</h3>
+          <p class="card-tagline">
+            アウトドア気分そのままに、ホテルのような快適さも欲しい方に。
+          </p>
+          <ul class="card-list">
+            <li>ダブルベッド1台＋2段ベッド（最大4名）</li>
+            <li>エアコン・暖房・空気清浄機</li>
+            <li>キッチン／室内トイレ・シャワー・冷蔵庫</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-label">バレルサウナ</div>
+          <h3>木の香りに包まれるサウナ</h3>
+          <p class="card-tagline">
+            日帰り利用や、宿泊とセットでのご利用もご相談いただけます。（予約制）
+          </p>
+          <ul class="card-list">
+            <li>バレルタイプの本格サウナ</li>
+            <li>水分補給・休憩スペースあり</li>
+            <li>静かな森の中で「ととのう」時間を</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 設備（サウナ＆共用設備＋トレーラー説明） -->
+    <section id="equipment">
+      <h2 class="section-title">サウナ＆共用設備</h2>
+      <p class="section-sub">
+        RVパーク s-craft では、バレルサウナやシャワー、炊事場など、滞在を快適にする共用設備をご用意しています。
+      </p>
+
+      <div class="two-col">
+        <div>
+          <article class="card">
+            <div class="card-label">サウナ</div>
+            <h3>バレルサウナ（予約制）</h3>
+            <ul class="card-list">
+              <li>木の香りに包まれるバレルタイプのサウナ</li>
+              <li>事前予約制で、貸し切り利用もご相談可能</li>
+              <li>ご家族・ご友人だけでゆっくり「ととのう」時間を</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-label">シャワー</div>
+            <h3>温水シャワー</h3>
+            <ul class="card-list">
+              <li>サウナ利用時はもちろん、宿泊のお客様も利用可能</li>
+              <li>お湯が使えるのでアウトドアの後も快適</li>
+            </ul>
+          </article>
+        </div>
+
+        <div>
+          <article class="card">
+            <div class="card-label">トイレ＆炊事場</div>
+            <h3>共用トイレ・炊事スペース</h3>
+            <ul class="card-list">
+              <li>男女別トイレ（洋式・ウォシュレット付き）</li>
+              <li>シンク＆給湯付きの炊事場</li>
+              <li>簡単な洗い物や調理にご利用いただけます</li>
+            </ul>
+            <p class="note">
+              ※車両は、<br />
+              なるべく乗り合わせでのご来場にご協力をお願いいたします。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- サイト＆料金・貸し切りプラン -->
+    <section id="sites">
+      <h2 class="section-title">サイト＆料金</h2>
+      <p class="section-sub">
+        詳細な料金は各予約サイトにてご確認ください。ここではサイトの種類と、貸し切りプランのイメージをご紹介します。
+      </p>
+
+      <div class="two-col">
+        <div>
+          <article class="card">
+            <div class="card-label">RVサイト</div>
+            <h3>電源付き車中泊サイト（全4区画）</h3>
+            <ul class="card-list">
+              <li>AC電源付きのフラットな区画サイト</li>
+              <li>車中泊・キャンピングカー・テント泊に対応</li>
+              <li>静かな環境で、ゆったりとした一泊を</li>
+            </ul>
+            <p class="note">
+              ※サイトの広さ・車両サイズなど、詳しくは予約サイトの説明欄をご確認ください。
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-label">トレーラーハウス泊</div>
+            <h3>フォレストリバー製トレーラーハウス</h3>
+            <ul class="card-list">
+              <li>ダブルベッド1台＋2段ベッドで最大4名まで</li>
+              <li>キッチン・トイレ・シャワー・冷蔵庫付き</li>
+              <li>雨の日や真冬でも安心のエアコン・暖房完備</li>
+            </ul>
+          </article>
+        </div>
+
+        <div>
+          <article class="card">
+            <div class="card-label">サイト貸し切りプラン</div>
+            <h3>4区画まとめて貸し切り</h3>
+            <p class="card-tagline">
+              仲間内だけでサイトを貸し切って、気兼ねなく過ごしたい方向けのプランです。
+            </p>
+            <ul class="card-list">
+              <li>RVサイト4区画をすべて貸し切りで利用</li>
+              <li><strong>4区画利用で「3区画分の料金」</strong>（1区画分お得）</li>
+              <li>グループキャンプ・家族旅行・オフ会などにおすすめ</li>
+            </ul>
+            <p class="note">
+              ※貸し切りプランは事前予約制です。<br />
+              ※繁忙期や特定日にはご利用いただけない場合があります。<br />
+              詳細はお問い合わせください。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- アクセス -->
+    <section id="access">
+      <h2 class="section-title">アクセス</h2>
+      <div class="access-wrap">
+        <p>
+          〒509-7201<br />
+          岐阜県恵那市笠置町毛呂窪字滝坂1720-1<br />
+          RVパーク s-craft
+        </p>
+        <p>
+          中央自動車道 恵那IC よりお車で約〇分。<br />
+          詳細なルートは、カーナビまたは地図アプリで「RVパーク s-craft」と検索してください。
+        </p>
+        <p class="note">
+          ※山あいの細い道がございますので、速度を落として安全運転でお越しください。<br />
+          ※大型車でお越しの場合は、事前にご相談いただけると安心です。
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      © RVパーク s-craft / Styling Craft
+    </footer>
+  </main>
 </body>
 </html>
