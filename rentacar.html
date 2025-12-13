@@ -206,6 +206,17 @@ a::before, a::after {
   display: none !important;
 }
 </style>
+<style>
+/* 予約エリアの影を全部殺す（box-shadow + filter + text-shadow） */
+#reserve .card,
+#reserve .reserve-card,
+#reserve .card *,
+#reserve .reserve-card *{
+  box-shadow: none !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+</style>
 
 </head>
 <body>
