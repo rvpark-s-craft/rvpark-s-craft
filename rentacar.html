@@ -236,12 +236,41 @@ a::before, a::after {
 </style>
 
 
-ぼかし/フィルタ”で影っぽく見えてたらそれも殺す */
-#reserve,
+
+<style>
+/* 予約エリアの「グレー背景/かぶさり」を全部殺す */
+#reserve
 #reserve * {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
   filter: none !important;
+  backdrop-filter: none !important;
   text-shadow: none !important;
 }
+
+/* もし疑似要素で薄い板が乗ってる場合 */
+#reserve::before,
+#reserve::after,
+#reserve *::before,
+#reserve *::after {
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  opacity: 0 !important;
+  content: none !important;
+}
+  /* reserveの親・section・bodyまで全部透明化 */
+section,
+section *,
+main,
+main *,
+body,
+body * {
+  background-color: transparent !important;
+}
+
 </style>
 
 </head>
