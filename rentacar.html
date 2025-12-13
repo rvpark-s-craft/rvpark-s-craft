@@ -147,18 +147,21 @@ FG<!DOCTYPE html>
       color: #777;
       padding: 16px 0 24px;
     }
-    @media (max-width: 640px) {
-      .hero h1 {
-        font-size: 1.5rem;
-      }
-    }
+   
   </style>
+
+
+
   <style>
   .btn {
     box-shadow: none !important;
   }
+    /* 予約エリアのカード影を完全に消す */
+#reserve .card {
+  box-shadow: none !important;
+}  
 </style>
-  
+
 <style>
 /* ボタンの「白い影」完全削除（hover/focus/active全部） */
 .btn,
@@ -390,7 +393,8 @@ a::before, a::after {
 
  
 
-      <div class="card">
+    <div class="card reserve-card">
+ 
         <p>予約カレンダーで空き状況をご確認のうえ、予約フォームからお申し込みください。</p>
         <ul>
           <li>STEP1：予約状況カレンダーで空き日程を確認</li>
