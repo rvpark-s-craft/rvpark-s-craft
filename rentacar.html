@@ -217,6 +217,32 @@ a::before, a::after {
   text-shadow: none !important;
 }
 </style>
+<style>
+/* 予約エリアの「グレーのカード（背景）」ごと消す */
+#reserve .reserve-card,
+#reserve .card {
+  background: transparent !important;  /* ← グレーの元を消す */
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+}
+
+/* 予約エリア内の余白がカードっぽさを出してる場合も潰す */
+#reserve .reserve-card,
+#reserve .card {
+  padding: 0 !important;
+}
+</style>
+
+
+ぼかし/フィルタ”で影っぽく見えてたらそれも殺す */
+#reserve,
+#reserve * {
+  filter: none !important;
+  text-shadow: none !important;
+}
+</style>
 
 </head>
 <body>
