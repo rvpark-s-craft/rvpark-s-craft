@@ -178,6 +178,25 @@ a.btn:focus-visible {
   appearance: none !important;
 }
 </style>
+<style>
+/* 謎の白い丸いモヤの原因になりがちな「装飾」を全部止める */
+.card, .card * {
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+.card {
+  background-image: none !important;
+}
+
+/* before/after の装飾（丸い光とか）を完全に無効化 */
+.card::before, .card::after,
+.btn::before, .btn::after,
+a::before, a::after {
+  content: none !important;
+  display: none !important;
+}
+</style>
 
 </head>
 <body>
