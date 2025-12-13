@@ -151,6 +151,31 @@ FG<!DOCTYPE html>
     box-shadow: none !important;
   }
 </style>
+<style>
+/* ボタンの「白い影」完全削除（hover/focus/active全部） */
+.btn,
+a.btn,
+.btn:hover,
+a.btn:hover,
+.btn:focus,
+a.btn:focus,
+.btn:active,
+a.btn:active,
+.btn:focus-visible,
+a.btn:focus-visible {
+  box-shadow: none !important;
+  filter: none !important;
+  outline: none !important;
+  background-image: none !important;
+  text-shadow: none !important;
+}
+
+/* Safari/一部ブラウザの謎の内側影対策 */
+.btn {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+</style>
 
 </head>
 <body>
