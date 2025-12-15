@@ -270,8 +270,10 @@ a::before, a::after {
   content: none !important;
 }
   /* reserveの親・section・bodyまで全部透明化 */
+ 
 section,
 section *,
+ 
 main,
 main *,
 body,
@@ -279,8 +281,17 @@ body * {
   background-color: transparent !important;
 }
 
-</style>
 
+/* hero内のCTAボタンは影・透明化の影響を受けさせない */
+.hero .btn,
+.hero .btn-primary {
+  opacity: 1 !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+</style>
 </head>
 <body>
   <header>
