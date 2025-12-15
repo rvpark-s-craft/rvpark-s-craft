@@ -246,6 +246,17 @@ a::before, a::after {
 
 
 <style>
+  /* ヘッダーを固定しない（スクロールに付いてくるようにする） */
+header{
+  position: static !important;
+}
+/* ヒーローのCTAボタンを強制的に通常表示に戻す */
+.hero .btn-primary{
+  opacity: 1 !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
 /* 予約エリアの「グレー背景/かぶさり」を全部殺す */
 #reserve
 #reserve * {
