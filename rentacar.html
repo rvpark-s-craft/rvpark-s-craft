@@ -276,6 +276,34 @@ a::before, a::after {
   backdrop-filter: none !important;
   text-shadow: none !important;
 }
+/* 予約エリアの「白いカード/影」を強制的に消す（最終兵器） */
+#reserve,
+#reserve .card,
+#reserve .reserve-card,
+#reserve .panel,
+#reserve .box,
+#reserve .container,
+#reserve .content,
+#reserve .inner,
+#reserve .wrapper {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  border: 0 !important;
+}
+
+/* 予約エリアの擬似要素が板を出してる場合も消す */
+#reserve::before,
+#reserve::after,
+#reserve *::before,
+#reserve *::after {
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
 
 /* もし疑似要素で薄い板が乗ってる場合 */
 
