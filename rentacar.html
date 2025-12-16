@@ -226,112 +226,26 @@ a::before, a::after {
   display: none !important;
 }
 </style>
-<style>
+
 /* 予約エリアの影を全部殺す（box-shadow + filter + text-shadow） */
-#reserve .card,
-#reserve .reserve-card,
-#reserve .card *,
-#reserve .reserve-card *{
-  box-shadow: none !important;
-  filter: none !important;
-  text-shadow: none !important;
-}
-</style>
-<style>
-/* 予約エリアの「グレーのカード（背景）」ごと消す */
-#reserve .reserve-card,
-#reserve .card {
-  background: transparent !important;  /* ← グレーの元を消す */
-  box-shadow: none !important;
-  border: none !important;
-  outline: none !important;
-  border-radius: 0 !important;
-}
 
-/* 予約エリア内の余白がカードっぽさを出してる場合も潰す */
-#reserve .reserve-card,
-#reserve .card {
-  padding: 0 !important;
-}
-</style>
 
 
 
 <style>
-
-/* ヒーローのCTAボタンを強制的に通常表示に戻す */
-.hero .btn-primary{
-  opacity: 1 !important;
-  filter: none !important;
-  -webkit-filter: none !important;
-}
-
-/* 予約エリアの「グレー背景/かぶさり」を全部殺す */
-#reserve
-#reserve * {
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  filter: none !important;
-  backdrop-filter: none !important;
-  text-shadow: none !important;
-}
-/* 予約エリアの「白いカード/影」を強制的に消す（最終兵器） */
+/* 予約エリアの白背景・影・かぶさりを完全に消す（最終確定） */
 #reserve,
-#reserve .card,
-#reserve .reserve-card,
-#reserve .panel,
-#reserve .box,
-#reserve .container,
-#reserve .content,
-#reserve .inner,
-#reserve .wrapper {
+#reserve *,
+#reserve::before,
+#reserve::after {
   background: transparent !important;
   background-color: transparent !important;
   box-shadow: none !important;
   filter: none !important;
   backdrop-filter: none !important;
+  text-shadow: none !important;
   border: 0 !important;
 }
-
-/* 予約エリアの擬似要素が板を出してる場合も消す */
-#reserve::before,
-#reserve::after,
-#reserve *::before,
-#reserve *::after {
-  background: transparent !important;
-  box-shadow: none !important;
-  filter: none !important;
-  backdrop-filter: none !important;
-}
-
-/* もし疑似要素で薄い板が乗ってる場合 */
-
-
- 
-
-
-
-/* hero内のCTAボタンは影・透明化の影響を受けさせない */
-.hero .btn,
-.hero .btn-primary {
-  opacity: 1 !important;
-  filter: none !important;
-  -webkit-filter: none !important;
-  text-shadow: none !important;
-  box-shadow: none !important;
-}
-  /* レイアウト共通カードの白背景を完全に殺す */
-.section,
-.section *,
-.container,
-.container *,
-.content,
-.content * {
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
 </style>
 </head>
 <body>
