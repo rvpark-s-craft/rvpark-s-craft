@@ -247,6 +247,29 @@ a::before, a::after {
   border: 0 !important;
 }
 </style>
+  <style>
+/* 予約CTAボタン化（青文字リンク用） */
+a.reserve-btn {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 14px 28px;
+  background: #1f3cff;
+  color: #fff !important;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  transition: all 0.2s ease;
+}
+
+a.reserve-btn:hover {
+  background: #0f2ad6;
+  transform: translateY(-2px);
+}
+</style>
+
 </head>
 <body>
   <header>
@@ -445,15 +468,8 @@ a::before, a::after {
 
         </ul>
         <p class="note">※クレジットカード決済をご希望の場合はお問い合わせください。</p>
-        <div style="margin-top:12px;">
-          <a class="btn btn-primary" href=https://docs.google.com/forms/d/1erNtaeXkDgBblhMcqVxUAkccF8pbc-fkNOmXTffb5Jk/edit#responses"<!-- ここに予約フォームのURL --><a href="https://docs.google.com/forms/d/1erNtaeXkDgBblhMcqVxUAkccF8pbc-fkNOmXTffb5Jk/edit#responses"
-class="btn btn-primary"   target="_blank" rel="noopener">
-予約フォームを開く
-</a>
-
-          <a class="btn btn-outline" href="<!-- ここに予約カレンダーのURL（Googleカレンダー等） -->" target="_blank" rel="noopener">予約状況カレンダーを見る</a>
-        </div>
-      </div>
+        
+    
     </section>
 
     <!-- 規約 -->
