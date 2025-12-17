@@ -14,13 +14,15 @@
       background-color: #f7f7f7;
       line-height: 1.7;
     }
-    .vehicle-img {
+.vehicle-img {
   width: 100%;
   max-width: 600px;
-  height: 360px;
-  object-fit: cover;
+  height: 300px;        /* ← 360 → 300 に下げる */
+  object-fit: contain; /* ← cover をやめる */
+  background: #f7f7f7; /* ← 余白が出ても違和感なし */
   border-radius: 12px;
 }
+
 
     header {
       background: #222;
