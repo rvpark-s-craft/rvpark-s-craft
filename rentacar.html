@@ -16,10 +16,13 @@
     }
 .vehicle-img{
   width: 100%;
-  max-height: 280px;
-  height: auto;
-  object-fit: contain;
+  height: 280px;        /* ←ここが肝：固定高さにする */
+  object-fit: contain;  /* ←切らない */
+  background: #f0f0f0;
+  border-radius: 12px;
+  display: block;
 }
+
 
   background: #f0f0f0;
   border-radius: 12px;
@@ -326,7 +329,8 @@ a.reserve-btn:hover {
       <div class="card vehicle-layout">
         <!-- ここにBMWの写真パスを入れてください -->
         <!-- 例: <img src="images/bmw_f31_front.jpg" alt="BMW320d ヒッチメンバー付"> -->
-     <img src="BMレンタカー.png" alt="BMW320d レンタカー" class="vehicle-img">
+  <img src="BMレンタカー-.png" alt="BMW320d レンタカー" class="vehicle-img">
+ 
 <div style="margin: 1rem 0;">
 <a href="https://docs.google.com/forms/d/e/1FAIpQLScTA8zSpRayzGQ0S_s2bL8VWqcax3TrcO_RtfYr91J_6G26Eg/viewform"
    class="btn btn-primary"
